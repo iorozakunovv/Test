@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css?family=Exo:400,700');
+body{
+  margin-left: 30px;
+  background-color: rgb(166, 166, 166);
+  font-size: 20px;
+  font-family: Avenir, sans-serif;
+  
+  background: gray;
+  }
+
+p{
+  color: rgb(0, 0, 0);
+  font-size: 22px;
+}
+label{
+  font-size: 20px;
+  color: rgb(3, 3, 3);
+}
+button{
+ width: 120px;
+ height: 40px;
+ font-size: 20px;
+ border: 0;
+ border-radius: 7px;
+}
+.test{
+  justify-content: center;
+  display: flex;
+  margin-top: 20%;
+}
+.click{
+  display: inline-block;
+  position: relative;
+  z-index: 1;
+  padding: 2em;
+  margin: -2em;
+}
+
+.check{
+  font-size: 25px;
+  font-weight: bold;
+}
+
