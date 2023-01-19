@@ -1,5 +1,7 @@
 <template>
-  <div v-for="(item, i) in data">
+  <body class="v">
+    <div class="back">
+      <div class="all"  v-for="(item, i) in data">
     <p>{{ item.question }}</p>
     <div class="variant" v-for="variant in item.variants">
       <input class="radio" type="radio" :name="item.id" :id="variant" :value="variant" v-model="check[i].value">
@@ -15,6 +17,11 @@
   <div>
 
   </div>
+    </div>
+    
+  </body>
+ 
+ 
 </template>
 <script>
 export default {
@@ -59,42 +66,65 @@ export default {
   //have fun
 </script>
 <style scoped>
-.button {
-  font-family: Avenir, sans-serif;
-  position: relative;
-  background-color:#FFAB9D;
-  border: none;
-  font-size: 18px;
-  text-align: center;
-  padding: 20px;
-  text-align: center;
-  width: 10%;
-  height: 3%;
-  font-weight: bold;
-  transition-duration: 0.4s;
-  text-decoration: none;
-  overflow: hidden;
-  cursor: pointer;
+.back{
+  background-color: rgb(212, 212, 212);
+  border: 5px solid;
+  margin: 20px;
+}
+.variant{
   color: black;
 }
+.var{
+  color: rgb(23, 23, 23);
+}
+.check{
+  color: rgb(0, 0, 0);
+}
+.all{
+  margin-left: 13px;
+}
+p{
+  color: rgb(22, 22, 22);
+  font-size: 27px;
+  font-weight: bold
+}
+.button{
+  background-color: rgb(255, 192, 57);
+   color: white;
+   margin: 8px;
+}
+.button:hover{
+ background-color: rgb(237, 123, 0);
+ cursor: pointer;
 
-.button:after {
-  content: "";
-  background: #f1f1f1;
-  display: block;
-  position: absolute;
-  padding-top: 300%;
-  padding-left: 350%;
-  margin-left: -20px !important;
-  margin-top: -120%;
-  opacity: 0;
-  transition: all 0.8s
 }
 
-.button:active:after {
-  padding: 0;
-  margin: 0;
-  opacity: 1;
-  transition: 0s
+
+.radio{
+  color: white;
+}
+
+body.v{
+    overflow: hidden;    
+    -webkit-animation: v 8s infinite;
+    animation: v 8s infinite;
+}
+
+@keyframes v{
+  0% {background:#29ADF0;}
+  20%{background:#F02999;}
+  40%{background:#F06E29;}
+  60%{background:#F0D829;}
+  80%{background:#29F03A;}
+  100%{background:#29ADF0;}
+}
+
+@-webkit-keyframes v{
+  0% {background:#29ADF0;}
+  20%{background:#F02999;}
+  40%{background:#F06E29;}
+  60%{background:#F0D829;}
+  80%{background:#29F03A;}
+  100%{background:#29ADF0;}
 }
 </style>

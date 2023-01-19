@@ -10,12 +10,15 @@
       </svg>
     </a>
   </div>
-  
+  <div class="bg"></div>
+<div class="bg bg2"></div>
+<div class="bg bg3"></div>
+
 
 </template>
 <style lang="sass">
 $color: #111
-$primary: #FFAB9D
+$primary: #23fc61
 
 html, body
   height: 100%
