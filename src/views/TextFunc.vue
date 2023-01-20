@@ -37,7 +37,7 @@ export default {
   methods: { 
 
     async getdata() {
-      const response = await fetch('http://localhost:3000/questions')
+      const response = await fetch('https://test-74b05-default-rtdb.firebaseio.com/questions.json')
       this.data = await response.json()
       this.check = this.data.map(item => ({
         value: null
@@ -45,7 +45,7 @@ export default {
 
     },
     async getanswer() {
-      const response = await fetch('http://localhost:3000/answers')
+      const response = await fetch('https://test-74b05-default-rtdb.firebaseio.com/answers.json')
       this.answer = await response.json()
     },
     send() {
